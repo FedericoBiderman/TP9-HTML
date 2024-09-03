@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitio de Eventos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .user-info {
+            color: white;
+            font-size: 16px;
+        }
+
+        .user-info a {
+            color: #f4f4f4;
+            text-decoration: none;
+            margin-left: 10px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Estilos para formularios */
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 20px auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            margin-left: -10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #555;
+        }
+
+        /* Estilos para las tarjetas de eventos */
+        .event-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .event-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .event-card h3 {
+            margin-top: 0;
+        }
+
+        .event-card button {
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .event-card button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>Logo del Sitio</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="user-info">
+            <!-- Mostrar solo cuando el usuario esté logueado -->
+            <p><span>Usuario Logueado</span> <a href="#">Cerrar Sesión</a></p>
+        </div>
+    </header>
+
+    <!-- Pantalla de Login -->
+    <main>
+        <h2>Iniciar Sesión</h2>
+        <form action="#" method="POST">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Iniciar Sesión</button>
+
+            <p>¿No tienes cuenta? <a href="#">Regístrate aquí</a></p>
+        </form>
+
+    </main>
+
+    <!-- Pantalla de Registro de Usuario -->
+    <main>
+        <h2>Regístrate</h2>
+        <form action="#" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirmar Contraseña:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <button type="submit">Registrarse</button>
+
+            <p>¿Ya tienes cuenta? <a href="#">Inicia sesión aquí</a></p>
+        </form>
+
+    </main>
+
+    <!-- Home de Listado de Eventos -->
+    <main>
+        <h2>Eventos</h2>
+        <div class="event-list">
+            <div class="event-card">
+                <h3>Evento 1</h3>
+                <p>Fecha: 12/09/2024</p>
+                <p>Ubicación: Buenos Aires</p>
+                <button>Ver Detalles</button>
+            </div>
+            <div class="event-card">
+                <h3>Evento 2</h3>
+                <p>Fecha: 20/09/2024</p>
+                <p>Ubicación: Córdoba</p>
+                <button>Ver Detalles</button>
+            </div>
+            <!-- Más eventos aquí -->
+        </div>
+    </main>
+
+    <!-- Pantalla de Detalle del Evento -->
+    <main>
+        <h2>Nombre del Evento</h2>
+        <p>Descripción: Este es un evento de ejemplo.</p>
+        <p>Fecha: 12/09/2024</p>
+        <p>Ubicación: Buenos Aires</p>
+        <p>Organizador: Ejemplo de Organizador</p>
+        <button>Inscribirse</button>
+        <button>Volver al Listado de Eventos</button>
+    </main>
+
+    <!-- Página de Contacto -->
+    <main>
+        <h2>Contacto</h2>
+        <p>Dirección: Calle Falsa 123, Buenos Aires</p>
+        <p>Email: contacto@ejemplo.com</p>
+        <p>Teléfono: +54 11 1234-5678</p>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer>
+        <p>&copy; 2024 Nombre del Sitio. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>
