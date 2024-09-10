@@ -1,5 +1,44 @@
-main h1 {
-    margin-bottom: 1.5rem;
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.eventos {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.evento {
+    width: calc(33.33% - 20px);
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.evento h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.evento p {
+    color: #34495e;
+    margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+    .evento {
+        width: 100%;
+    }
 }
 
 form {

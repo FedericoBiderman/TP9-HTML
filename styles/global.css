@@ -11,10 +11,6 @@ body {
     margin: 0;
 }
 
-main {
-    padding: 2rem;
-}
-
 footer {
     background-color: #333;
     color: #fff;
@@ -25,65 +21,70 @@ footer {
 
 header {
     display: flex;
-    justify-content: space-between; /* Espacio entre el logo y el contenedor de user-info */
-    align-items: center; /* Alineación vertical centrada */
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
-    background-color: #333; /* Color de fondo del header */
-    color: white; /* Color del texto */
+    background-color: #333;
+    color: white;
 }
 
-.nav-container {
+.logo {
+    flex: 0 0 auto;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+nav {
     display: flex;
-    justify-content: center; /* Centra los elementos blancos */
-    flex-grow: 1; /* Permite que el contenedor crezca para ocupar el espacio disponible */
+    justify-content: center;
 }
 
-.nav-item {
-    background-color: white; /* Fondo blanco */
-    padding: 20px;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
     margin: 0 10px;
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+nav ul li a {
+    color: white; /* Asegúrate de que este color contraste con el fondo */
+    text-decoration: none;
+    font-size: 16px; /* Ajusta el tamaño de la fuente según sea necesario */
+    padding: 5px 10px;
+    display: block; /* Esto asegura que el área clickeable cubra todo el espacio del enlace */
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Efecto hover sutil */
 }
 
 .user-info {
+    flex: 0 0 auto;
     display: flex;
-    align-items: center; /* Alinea verticalmente al centro */
-    margin-left: auto; /* Empuja el contenedor a la derecha */
+    align-items: center;
 }
 
 .user-info img {
     width: 40px;
     height: 40px;
-    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    margin-right: 10px;
 }
 
 .user-info span {
-    margin-right: 20px; /* Espacio entre el texto y el enlace */
+    margin-right: 10px;
 }
 
 .user-info a {
-    color: #3498db; /* Color del enlace */
-    text-decoration: none; /* Sin subrayado */
+    color: #3498db;
+    text-decoration: none;
 }
 
 .user-info a:hover {
-    text-decoration: underline; /* Subrayado al pasar el ratón */
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between; /* Distribuye los elementos del header equitativamente */
-    align-items: center; /* Alineación vertical de los elementos */
-    padding: 10px 20px; /* Espaciado interno del contenedor */
-    background-color: #333; /* Color de fondo del header */
-}
-
-.logo {
-    flex-shrink: 0; /* Evita que el logo se encoja */
-}
-
-.logo img {
-    width: 100px; /* Ajusta el tamaño del logo a 100px de ancho */
-    height: auto; /* Mantiene la proporción del logo */
+    text-decoration: underline;
 }
